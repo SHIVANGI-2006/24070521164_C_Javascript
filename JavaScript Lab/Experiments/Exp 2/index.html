@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechZone Computer Store</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjkHFxkp-v2_11nBsAKTZihC1yr9yPB1q_zngMHVYPVw&s=10");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+/* Animated Grid */
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+
+background-size:35px 35px;
+
+}
+
+/* RGB Border */
+
+.card{
+
+width:500px;
+
+background:#111827;
+
+border-radius:20px;
+
+padding:4px;
+
+background:linear-gradient(
+45deg,
+#00e5ff,
+#2979ff,
+#00c853,
+#ffea00,
+#ff1744,
+#00e5ff);
+
+background-size:500%;
+
+animation:rgb 8s linear infinite;
+
+position:relative;
+
+}
+
+@keyframes rgb{
+
+0%{background-position:0%}
+
+100%{background-position:500%}
+
+}
+
+.inner{
+
+background:#111827;
+
+border-radius:18px;
+
+overflow:hidden;
+
+color:white;
+
+}
+
+/* Header */
+
+.header{
+
+padding:25px;
+
+text-align:center;
+
+background:#1f2937;
+
+border-bottom:2px solid #00e5ff;
+
+}
+
+.logo{
+
+font-size:55px;
+
+}
+
+.header h1{
+
+margin-top:10px;
+
+color:#00e5ff;
+
+}
+
+.header p{
+
+color:#cbd5e1;
+
+margin-top:8px;
+
+}
+
+/* Chip */
+
+.chip{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:8px 18px;
+
+background:#00e5ff;
+
+color:#111827;
+
+border-radius:20px;
+
+font-weight:bold;
+
+}
+
+/* Content */
+
+.content{
+
+padding:28px;
+
+}
+
+.row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:15px 0;
+
+border-bottom:1px solid #374151;
+
+}
+
+.label{
+
+color:#00e5ff;
+
+font-weight:bold;
+
+}
+
+.summary{
+
+margin-top:20px;
+
+}
+
+.box{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:14px;
+
+margin:10px 0;
+
+background:#1f2937;
+
+border-left:5px solid #00e5ff;
+
+border-radius:8px;
+
+}
+
+/* Total */
+
+.total{
+
+margin-top:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+background:#00e5ff;
+
+color:#111827;
+
+padding:18px;
+
+font-size:24px;
+
+font-weight:bold;
+
+border-radius:10px;
+
+box-shadow:0 0 20px #00e5ff;
+
+}
+
+.footer{
+
+text-align:center;
+
+padding:20px;
+
+color:#94a3b8;
+
+}
+
+.footer strong{
+
+color:#00e5ff;
+
+}
+
+.inner:hover{
+
+transform:translateY(-5px);
+
+transition:.4s;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="inner">
+
+<div class="header">
+
+<div class="logo">
+
+💻
+
+</div>
+
+<h1>TECHZONE</h1>
+
+<p>Computer & Gaming Store</p>
+
+<div class="chip">
+
+✔ WARRANTY INCLUDED
+
+</div>
+
+</div>
+
+<div id="receipt"></div>
+
+<div class="footer">
+
+<strong>Thank You!</strong>
+
+<br>
+
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// var
+
+var customerName=prompt("Enter Customer Name");
+
+// let
+
+let productName=prompt("Enter Product Name");
+
+let price=Number(prompt("Enter Product Price"));
+
+let quantity=Number(prompt("Enter Quantity"));
+
+// const
+
+const GST_RATE=0.18;
+
+// Calculation
+
+let subtotal=price*quantity;
+
+let gst=subtotal*GST_RATE;
+
+let total=subtotal+gst;
+
+// Object
+
+const bill={
+
+customerName,
+productName,
+price,
+quantity,
+subtotal,
+gst,
+total
+
+};
+
+// Destructuring
+
+const{
+
+customerName:cname,
+
+productName:pname,
+
+price:pprice,
+
+quantity:qty,
+
+subtotal:sub,
+
+gst:gstAmount,
+
+total:grandTotal
+
+}=bill;
+
+// Template Literals
+
+document.getElementById("receipt").innerHTML=`
+
+<div class="content">
+
+<div class="row">
+
+<span class="label">👤 Customer</span>
+
+<span>${cname}</span>
+
+</div>
+
+<div class="row">
+
+<span class="label">💻 Product</span>
+
+<span>${pname}</span>
+
+</div>
+
+<div class="row">
+
+<span class="label">💰 Price</span>
+
+<span>₹${pprice.toFixed(2)}</span>
+
+</div>
+
+<div class="row">
+
+<span class="label">📦 Quantity</span>
+
+<span>${qty}</span>
+
+</div>
+
+<div class="summary">
+
+<div class="box">
+
+<span>Subtotal</span>
+
+<span>₹${sub.toFixed(2)}</span>
+
+</div>
+
+<div class="box">
+
+<span>GST (18%)</span>
+
+<span>₹${gstAmount.toFixed(2)}</span>
+
+</div>
+
+<div class="total">
+
+<span>Total</span>
+
+<span>₹${grandTotal.toFixed(2)}</span>
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+</script>
+
+</body>
+</html>
