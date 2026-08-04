@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Grade Card</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+  <h1>Student Grade Card</h1>
+  <h2 id="studentName"></h2>
+  <p id="studentInfo" class="subtitle"></p>
+
+  <table>
+    <tr>
+      <th>Subject</th>
+      <th>Marks</th>
+      <th>Grade</th>
+    </tr>
+    <tbody id="tableData"></tbody>
+  </table>
+
+  <h3 id="percentage"></h3>
+  <h3 id="overallGrade"></h3>
+
+  <a href="index.html">
+    <button type="button">Back</button>
+  </a>
+</div>
+
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("student"));
+
+if (!data) {
+  window.location.href = "index.html";
+} else {
+  document.getElementById("studentName").innerHTML = "Student : " + data.name;
+  document.getElementById("studentInfo").innerHTML = "PRN : " + data.prn;
+
+  const subjects = [
+    ["Computer Networks", data.cn],
+    ["Compiler Construction", data.cc],
+    ["Data Compression", data.dc],
+    ["Agentic AI", data.ai],
+    ["Flexi-credit JavaScript", data.js],
+    ["Soft Computing", data.sc]
+  ];
+
+  function grade(mark) {
+    if (mark >= 90) return "A+";
+    else if (mark >= 80) return "A";
+    else if (mark >= 70) return "B";
+    else if (mark >= 60) return "C";
+    else if (mark >= 50) return "D";
+    else return "F";
+  }
+
+  let total = 0;
+  let output = "";
+
+  subjects.forEach(subject => {
+    total += Number(subject[1]);
+    output += `
+      <tr>
+        <td>${subject[0]}</td>
+        <td>${subject[1]}</td>
+        <td>${grade(subject[1])}</td>
+      </tr>
+    `;
+  });
+
+  document.getElementById("tableData").innerHTML = output;
+
+  let percentage = (total / 600 * 100).toFixed(2);
+  document.getElementById("percentage").innerHTML = "Percentage : " + percentage + "%";
+  document.getElementById("overallGrade").innerHTML = "Overall Grade : " + grade(percentage);
+}
+</script>
+
+</body>
+</html>
