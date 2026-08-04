@@ -1,0 +1,334 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Times New Roman', monospace;
+}
+
+body{
+    margin: 0;
+    padding: 40px 20px;
+    font-family: 'Roboto Mono', monospace;
+
+    background: url("images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    color: white;
+}
+.container{
+    width: 1200px;
+    max-width: 100%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:25px;
+}
+
+.logo h1{
+    font-size:32px;
+    margin-bottom:12px;
+    color:#ffffff;
+}
+
+.logo p{
+    font-size:18px;
+    color:#dddddd;
+    font-weight:500;
+}
+
+.title h2{
+    font-size:30px;
+    color:#ffffff;
+}
+
+hr{
+    border:none;
+    border-top:2px solid #8a8a8a;
+    margin:25px 0;
+}
+
+main{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+/* ===========================
+   PANEL TITLES
+=========================== */
+
+.left-panel h2,
+.right-panel h2{
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+#billingForm,
+.invoice{
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(8px);
+}
+
+.input-group{
+    margin-bottom:22px;
+}
+
+.input-group label{
+    display:block;
+    font-size:20px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.input-group label i{
+    width:28px;
+}
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    padding:13px;
+
+    font-size:18px;
+
+    color:rgb(10, 10, 10);
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:8px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    border-color:#4CAF50;
+
+    box-shadow:0 0 12px rgba(76,175,80,.4);
+
+}
+/* ===========================
+   BUTTONS
+=========================== */
+
+.button-group{
+    margin-top:35px;
+    display:flex;
+    gap:18px;
+}
+
+.button-group button{
+
+    flex:1;
+
+    padding:15px;
+
+    font-size:18px;
+
+    color:white;
+
+    background:#4CAF50;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.button-group button:hover{
+
+    transform:translateY(-3px);
+
+    background:#2E7D32;
+
+    box-shadow:0 8px 20px rgba(76,175,80,.4);
+
+}
+
+#billingForm:hover,
+.invoice:hover{
+
+    transform:translateY(-5px);
+
+    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+}
+/* ===========================
+   INVOICE
+=========================== */
+
+.invoice{
+    border:2px solid #d9d9d9;
+    padding:30px;
+}
+
+.invoice p{
+    display:flex;
+    justify-content:space-between;
+    margin:18px 0;
+    font-size:20px;
+}
+
+.invoice h3{
+    display:flex;
+    justify-content:space-between;
+    margin-top:25px;
+    font-size:30px;
+    color:#FFD54F;
+}
+
+.invoice hr{
+    margin:20px 0;
+    border-top:1px dashed #999;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    margin-top:45px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* ===========================
+   INPUT PLACEHOLDER
+=========================== */
+
+::placeholder{
+    color:#b8b8b8;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#222;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#555;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#777;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    main{
+        grid-template-columns:1fr;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .logo h1{
+        font-size:28px;
+    }
+
+    .title h2{
+        font-size:26px;
+    }
+
+    .left-panel h2,
+    .right-panel h2{
+        font-size:24px;
+    }
+
+    .invoice p{
+        font-size:18px;
+    }
+
+    .invoice h3{
+        font-size:26px;
+    }
+
+}
+
+@media(max-width:600px){
+
+    body{
+        padding:20px 10px;
+    }
+
+    #billingForm,
+    .invoice{
+        padding:20px;
+    }
+
+    .input-group label{
+        font-size:18px;
+    }
+
+    .input-group input,
+    .input-group select{
+        font-size:16px;
+    }
+
+    footer{
+        font-size:18px;
+    }
+
+}
