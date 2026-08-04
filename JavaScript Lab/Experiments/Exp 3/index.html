@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Marks Entry</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Student Grading System</h1>
+
+<form id="marksForm">
+
+<label>Student Name</label>
+<input type="text" id="name" required>
+
+<label>Computer Networks</label>
+<input type="number" id="cn" min="0" max="100" required>
+
+<label>Compiler Construction</label>
+<input type="number" id="cc" min="0" max="100" required>
+
+<label>Data Compression</label>
+<input type="number" id="dc" min="0" max="100" required>
+
+<label>Agentic AI</label>
+<input type="number" id="ai" min="0" max="100" required>
+
+<label>Flexi-credit JavaScript</label>
+<input type="number" id="js" min="0" max="100" required>
+
+<label>Soft Computing (Specialization)</label>
+<input type="number" id="sc" min="0" max="100" required>
+
+<button type="submit">Generate Grade Card</button>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
