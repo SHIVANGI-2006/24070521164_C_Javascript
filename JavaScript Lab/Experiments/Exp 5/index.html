@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodiiesss...</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🍕 Foodiiesss...</h1>
+    <p>Delicious Food Delivered to You</p>
+</header>
+
+<main>
+
+    <!-- Menu -->
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div id="foodItems" class="food-grid"></div>
+    </section>
+
+    <!-- Cart -->
+    <section class="cart">
+        <h2>🛒 Your Cart</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="bill">
+
+            <div>
+                <span>Subtotal</span>
+                <span>₹<b id="subtotal">0.00</b></span>
+            </div>
+
+            <div>
+                <span>Discount (<b id="discountPercent">0</b>%)</span>
+                <span class="green">
+                    -₹<b id="discountAmount">0.00</b>
+                </span>
+            </div>
+
+            <div>
+                <span>Amount After Discount</span>
+                <span>₹<b id="afterDiscount">0.00</b></span>
+            </div>
+
+            <div>
+                <span>Tax (5%)</span>
+                <span>₹<b id="taxAmount">0.00</b></span>
+            </div>
+
+            <hr>
+
+            <div class="total">
+                <span>Final Total</span>
+                <span>₹<b id="finalTotal">0.00</b></span>
+            </div>
+
+            <button onclick="calculateTotal()">
+                Calculate Bill
+            </button>
+
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
