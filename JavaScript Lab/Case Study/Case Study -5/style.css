@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #eef2f7;
+    color: #222;
+    padding: 30px;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+/* Header */
+header {
+    background: #166534;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+header p {
+    font-size: 16px;
+}
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.card h2 {
+    margin-bottom: 20px;
+    color: #166534;
+}
+/* Players */
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.player {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+}
+.player .icon {
+    font-size: 35px;
+}
+.player h3 {
+    margin: 8px 0;
+}
+.runs {
+    font-size: 24px;
+    font-weight: bold;
+    color: #166534;
+}
+.label {
+    color: #666;
+    font-size: 13px;
+}
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+    background: #166534;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background: #14532d;
+}
+/* Result */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8fafc;
+    border-left: 4px solid #166534;
+    min-height: 50px;
+    line-height: 1.6;
+}
+/* Statistics */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+.stats div {
+    background: #f0fdf4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.stats h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.stats p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #166534;
+}
+/* Responsive */
+@media (max-width: 700px) {
+
+    .players {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 450px) {
+
+    .players {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}

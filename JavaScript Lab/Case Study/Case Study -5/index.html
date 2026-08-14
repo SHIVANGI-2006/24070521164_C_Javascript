@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Player Statistics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🏏 Cricket Player Statistics</h1>
+            <p>Explore Player Performance Using JavaScript Arrays</p>
+        </header>
+
+        <!-- Player List -->
+        <section class="card">
+
+            <h2>🏆 Player Scores</h2>
+
+            <div id="playerList" class="players"></div>
+
+        </section>
+
+
+        <!-- Array Operations -->
+        <section class="card">
+
+            <h2>🔧 Array Operations</h2>
+
+            <div class="buttons">
+
+                <button onclick="addPlayer()">Push Player</button>
+
+                <button onclick="removeLastPlayer()">Pop Player</button>
+
+                <button onclick="removeFirstPlayer()">Shift Player</button>
+
+                <button onclick="addFirstPlayer()">Unshift Player</button>
+
+                <button onclick="replacePlayer()">Splice Player</button>
+
+                <button onclick="showSlice()">Slice Players</button>
+
+                <button onclick="resetPlayers()">Reset</button>
+
+            </div>
+
+            <div id="operationResult" class="result">
+                Select an operation
+            </div>
+
+        </section>
+
+
+        <!-- Array Methods -->
+        <section class="card">
+
+            <h2>📊 Array Methods</h2>
+
+            <div class="buttons">
+
+                <button onclick="useMap()">map()</button>
+
+                <button onclick="useFilter()">filter()</button>
+
+                <button onclick="useReduce()">reduce()</button>
+
+                <button onclick="useForEach()">forEach()</button>
+
+            </div>
+
+            <div id="methodResult" class="result">
+                Select an array method
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="card">
+
+            <h2>📈 Team Statistics</h2>
+
+            <button onclick="calculateStatistics()">
+                Calculate Statistics
+            </button>
+
+            <div class="stats">
+
+                <div>
+                    <h3>Total Runs</h3>
+                    <p id="totalRuns">-</p>
+                </div>
+
+                <div>
+                    <h3>Highest Score</h3>
+                    <p id="highestScore">-</p>
+                </div>
+
+                <div>
+                    <h3>Lowest Score</h3>
+                    <p id="lowestScore">-</p>
+                </div>
+
+                <div>
+                    <h3>Players Above 50</h3>
+                    <p id="above50">-</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
