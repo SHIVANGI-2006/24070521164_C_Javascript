@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Bucket List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>✈️ My Travel Bucket List</h1>
+            <p>Plan your dream destinations!</p>
+        </header>
+        <!-- Add Destination -->
+        <section class="add-destination">
+            <input
+                type="text"
+                id="destinationInput"
+                placeholder="Enter a destination..."
+            >
+            <button id="addButton">
+                + Add Destination
+            </button>
+        </section>
+        <!-- Destination List -->
+        <section class="destination-section">
+            <h2>🌍 My Destinations</h2>
+            <ul id="destinationList">
+                <!-- Destinations added dynamically -->
+            </ul>
+        </section>
+        <!-- Counter -->
+        <div class="counter">
+            Total Destinations:
+            <span id="destinationCount">0</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
