@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Text Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <div class="icon">📄</div>
+        <h1>Resume Text Analyzer</h1>
+        <p>Analyze resume content using JavaScript String Functions & Regex</p>
+    </header>
+
+    <!-- Input -->
+    <section class="card">
+
+        <h2>📝 Paste Your Resume</h2>
+
+        <textarea id="resumeText"
+            placeholder="Paste your resume text here...
+
+Example:
+Shivangi Kushwaha
+Email: shivangi@gmail.com
+Phone: 9876543210
+Skills: JavaScript, Python, HTML, CSS
+Education: B.Tech Computer Science
+Experience: Software Development Intern">
+        </textarea>
+
+        <button class="analyze-btn" onclick="analyzeResume()">
+            🔍 Analyze Resume
+        </button>
+
+    </section>
+
+    <!-- String Functions -->
+    <section class="card">
+
+        <h2>🔤 String Analysis</h2>
+
+        <div class="grid">
+
+            <div class="box">
+                <h3>Length</h3>
+                <p id="length">-</p>
+            </div>
+
+            <div class="box">
+                <h3>Words</h3>
+                <p id="wordCount">-</p>
+            </div>
+
+            <div class="box">
+                <h3>Characters</h3>
+                <p id="characters">-</p>
+            </div>
+
+            <div class="box">
+                <h3>Uppercase</h3>
+                <p id="uppercase">-</p>
+            </div>
+
+            <div class="box">
+                <h3>Lowercase</h3>
+                <p id="lowercase">-</p>
+            </div>
+
+            <div class="box">
+                <h3>Trimmed Text</h3>
+                <p id="trimmed">-</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Email Extraction -->
+    <section class="card">
+
+        <h2>📧 Extracted Email IDs</h2>
+
+        <div id="emails" class="email-result">
+            No email IDs found.
+        </div>
+
+    </section>
+
+    <!-- Skill Search -->
+    <section class="card">
+
+        <h2>💻 Check Resume Skill</h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="skill"
+                placeholder="Enter skill e.g. Python"
+            >
+
+            <button onclick="checkSkill()">
+                Check Skill
+            </button>
+
+        </div>
+
+        <p id="skillResult"></p>
+
+    </section>
+    <!-- Replace -->
+    <section class="card">
+
+        <h2>✏️ Replace Text</h2>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="oldText"
+                placeholder="Text to replace"
+            >
+
+            <input
+                type="text"
+                id="newText"
+                placeholder="New text"
+            >
+
+            <button onclick="replaceText()">
+                Replace
+            </button>
+
+        </div>
+
+        <p id="replaceResult"></p>
+
+    </section>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
