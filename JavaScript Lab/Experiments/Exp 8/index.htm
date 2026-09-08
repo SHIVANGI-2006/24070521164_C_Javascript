@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F&Z Gym</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="logo">🏋️ F&Z</div>
+            <p>BUILD YOUR BEST SELF</p>
+        </header>
+        <!-- MAIN CONTENT -->
+        <div class="main-section">
+            <!-- PERSONAL DETAILS -->
+            <section class="details">
+                <h2>👤 YOUR DETAILS</h2>
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <small id="nameMsg"></small>
+                <label>Email</label>
+                <input type="text" id="email" placeholder="Enter your email">
+                <small id="emailMsg"></small>
+                <div class="small-fields">
+                    <div>
+                        <label>Age</label>
+                        <input type="number" id="age" placeholder="Age">
+                        <small id="ageMsg"></small>
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                        <input type="text" id="phone" placeholder="Phone number">
+                        <small id="phoneMsg"></small>
+                    </div>
+                </div>
+            </section>
+            <!-- MEMBERSHIP PLANS -->
+            <section class="plans">
+                <h2>💳 CHOOSE YOUR PLAN</h2>
+                <div class="plan-container">
+                    <!-- BASIC -->
+                    <div class="plan" data-plan="Basic">
+                        <div class="plan-icon">🥉</div>
+                        <h3>BASIC</h3>
+                        <h4>₹999</h4>
+                        <p>/ month</p>
+                        <button type="button">SELECT</button>
+                    </div>
+                    <!-- PREMIUM -->
+                    <div class="plan" data-plan="Premium">
+                        <div class="plan-icon">🥈</div>
+                        <h3>PREMIUM</h3>
+                        <h4>₹1499</h4>
+                        <p>/ month</p>
+                        <button type="button">SELECT</button>
+                    </div>
+                    <!-- ELITE -->
+                    <div class="plan" data-plan="Elite">
+                        <div class="plan-icon">🥇</div>
+                        <h3>ELITE</h3>
+                        <h4>₹1999</h4>
+                        <p>/ month</p>
+                        <button type="button">SELECT</button>
+                    </div>
+                </div>
+                <p id="selectedPlan">No plan selected</p>
+            </section>
+        </div>
+        <!-- LIVE VALIDATION -->
+        <section class="validation">
+            <h2>✓ LIVE VALIDATION</h2>
+            <div class="status">
+                <span id="nameStatus">Name ⏳</span>
+                <span id="emailStatus">Email ⏳</span>
+                <span id="ageStatus">Age ⏳</span>
+                <span id="phoneStatus">Phone ⏳</span>
+            </div>
+            <button id="joinBtn">JOIN NOW</button>
+            <p id="result"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

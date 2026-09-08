@@ -1,0 +1,209 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: #0F172A;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+/* MAIN CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #FFFFFF;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+/* HEADER */
+header {
+    background: #0F172A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+}
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+header p {
+    margin-top: 8px;
+    color: #A78BFA;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+/* MAIN SECTION */
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 35px;
+    padding: 40px;
+    background: #F8FAFC;
+}
+/* DETAILS AND PLANS */
+.details,
+.plans {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+h2 {
+    color: #1E293B;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+/* INPUT FIELDS */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #1E293B;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #1E293B;
+    background: #FFFFFF;
+}
+input:focus {
+    outline: none;
+    border-color: #7C3AED;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+/* SMALL FIELDS */
+.small-fields {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 15px;
+}
+/* VALIDATION MESSAGE */
+small {
+    display: block;
+    min-height: 18px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+/* MEMBERSHIP PLAN */
+.plan-container {
+    display: flex;
+    gap: 15px;
+}
+.plan {
+    flex: 1;
+    text-align: center;
+    border: 2px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px 10px;
+    background: #FFFFFF;
+    transition: 0.2s;
+}
+.plan:hover {
+    border-color: #7C3AED;
+    transform: translateY(-3px);
+}
+.plan.selected {
+    border-color: #7C3AED;
+    background: #F3E8FF;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+.plan-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.plan h3 {
+    color: #1E293B;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.plan h4 {
+    color: #7C3AED;
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+.plan p {
+    color: #64748B;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+/* PLAN BUTTON */
+.plan button {
+    background: #0F172A;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.plan button:hover {
+    background: #7C3AED;
+}
+/* SELECTED PLAN TEXT */
+#selectedPlan {
+    text-align: center;
+    margin-top: 20px;
+    color: #7C3AED;
+    font-weight: bold;
+}
+/* VALIDATION SECTION */
+.validation {
+    background: #FFFFFF;
+    border-top: 1px solid #E2E8F0;
+    padding: 30px;
+    text-align: center;
+}
+.validation h2 {
+    margin-bottom: 20px;
+}
+/* STATUS */
+.status {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+.status span {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: #F1F5F9;
+    color: #475569;
+    font-size: 14px;
+}
+/* JOIN BUTTON */
+#joinBtn {
+    background: #7C3AED;
+    color: #FFFFFF;
+    border: none;
+    padding: 13px 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#joinBtn:hover {
+    background: #0F172A;
+}
+/* RESULT */
+#result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+/* VALID / INVALID */
+.valid {
+    border-color: #16A34A !important;
+}
+.invalid {
+    border-color: #DC2626 !important;
+}
