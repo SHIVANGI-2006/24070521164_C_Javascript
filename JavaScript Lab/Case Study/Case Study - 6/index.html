@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Toolkit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="icon">🔤</div>
+            <h1>Text Toolkit</h1>
+            <p>Explore JavaScript String Operations</p>
+        </header>
+        <!-- Input -->
+        <section class="card">
+            <h2>📝 Enter Your Text</h2>
+            <textarea
+                id="inputText"
+                placeholder="Enter a sentence or paragraph here..."
+            ></textarea>
+            <button onclick="analyzeText()">
+                Analyze Text
+            </button>
+        </section>
+        <!-- Basic String Operations -->
+        <section class="card">
+            <h2>🔧 String Operations</h2>
+            <div class="results">
+                <div class="result-box">
+                    <h3>String Length</h3>
+                    <p id="length">-</p>
+                </div>
+                <div class="result-box">
+                    <h3>Substring</h3>
+                    <p id="substring">-</p>
+                </div>
+                <div class="result-box">
+                    <h3>Index of "a"</h3>
+                    <p id="indexOf">-</p>
+                </div>
+                <div class="result-box">
+                    <h3>Split</h3>
+                    <p id="split">-</p>
+                </div>
+                <div class="result-box">
+                    <h3>Replace</h3>
+                    <p id="replace">-</p>
+                </div>
+            </div>
+        </section>
+        <!-- Case Study -->
+        <section class="card">
+            <h2>📊 Case Study Results</h2>
+            <div class="case-study">
+                <div>
+                    <h3>🔄 Reversed String</h3>
+                    <p id="reverse">-</p>
+                </div>
+                <div>
+                    <h3>🔤 Number of Vowels</h3>
+                    <p id="vowels">-</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
