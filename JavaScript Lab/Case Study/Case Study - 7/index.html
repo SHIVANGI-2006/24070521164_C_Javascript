@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Workshop Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="icon">💃</div>
+            <h1>Dance Workshop</h1>
+            <p>Register now and dance with us!</p>
+        </header>
+        <form id="registrationForm">
+            <h2>📝 Registration Form</h2>
+            <!-- First Name -->
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                    type="text"
+                    id="firstName"
+                    placeholder="Enter your first name"
+                >
+                <small id="firstNameError"></small>
+            </div>
+            <!-- Last Name -->
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                    type="text"
+                    id="lastName"
+                    placeholder="Enter your last name"
+                >
+                <small id="lastNameError"></small>
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@gmail.com"
+                >
+                <small id="emailError"></small>
+            </div>
+            <!-- Birthday -->
+            <div class="form-group">
+                <label for="birthday">Date of Birth</label>
+                <input
+                    type="date"
+                    id="birthday"
+                >
+                <small id="birthdayError"></small>
+            </div>
+            <!-- Dance Style -->
+            <div class="form-group">
+                <label for="danceStyle">Dance Style</label>
+                <select id="danceStyle">
+                    <option value="">
+                        Select a dance style
+                    </option>
+                    <option value="Hip Hop">
+                        Hip Hop
+                    </option>
+                    <option value="Classical">
+                        Classical
+                    </option>
+                    <option value="Contemporary">
+                        Contemporary
+                    </option>
+                    <option value="Bollywood">
+                        Bollywood
+                    </option>
+                    <option value="Salsa">
+                        Salsa
+                    </option>
+                    <option value="Jazz">
+                        Jazz
+                    </option>
+                </select>
+                <small id="danceStyleError"></small>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Create Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                >
+                <small id="passwordError"></small>
+            </div>
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label for="confirmPassword">
+                    Re-enter Password
+                </label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Re-enter password"
+                >
+                <small id="confirmPasswordError"></small>
+            </div>
+            <!-- Terms -->
+            <div class="terms">
+                <input
+                    type="checkbox"
+                    id="terms"
+                >
+                <label for="terms">
+                    I agree to the Terms and Conditions
+                </label>
+            </div>
+            <small id="termsError"></small>
+            <!-- Submit -->
+            <button type="submit">
+                💃 Register for Workshop
+            </button>
+            <!-- Success Message -->
+            <div id="successMessage"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #797477;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #1f2937;
+}
+.container {
+    width: 100%;
+    max-width: 550px;
+    background: rgb(182, 180, 180);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+/* Header */
+header {
+    background: #db2777;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+.icon {
+    font-size: 50px;
+}
+header h1 {
+    font-size: 32px;
+    margin: 10px 0 5px;
+}
+header p {
+    font-size: 15px;
+}
+/* Form */
+form {
+    padding: 30px;
+}
+form h2 {
+    margin-bottom: 25px;
+    color: #be185d;
+}
+/* Form Groups */
+.form-group {
+    margin-bottom: 18px;
+}
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #374151;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+/* Focus Event */
+input:focus,
+select:focus {
+    border-color: #db2777;
+    box-shadow: 0 0 0 3px #fce7f3;
+}
+/* Error Messages */
+small {
+    display: block;
+    margin-top: 5px;
+    font-size: 13px;
+    color: #dc2626;
+}
+/* Terms */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+.terms input {
+    width: 17px;
+    height: 17px;
+}
+.terms label {
+    margin: 0;
+    font-weight: normal;
+}
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #db2777;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background: #be185d;
+}
+/* Success */
+#successMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: #16a34a;
+    font-weight: bold;
+}
+/* Mobile */
+@media (max-width: 500px) {
+    body {
+        padding: 20px 10px;
+    }
+    form {
+        padding: 22px;
+    }
+    header h1 {
+        font-size: 27px;
+    }
+}
