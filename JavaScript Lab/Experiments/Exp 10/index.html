@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Student Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Campus Student Manager</h1>
+            <p>Student Information Dashboard</p>
+        </header>
+        <div class="add-box">
+            <h2>➕ Add New Student</h2>
+            <div class="form">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name"
+                >
+                <input
+                    type="text"
+                    id="department"
+                    placeholder="Department"
+                >
+                <select id="year">
+                    <option value="">Select Year</option>
+                    <option value="1st Year">1st Year</option>
+                    <option value="2nd Year">2nd Year</option>
+                    <option value="3rd Year">3rd Year</option>
+                    <option value="4th Year">4th Year</option>
+                </select>
+                <input
+                    type="number"
+                    id="cgpa"
+                    placeholder="CGPA"
+                    step="0.1"
+                    min="0"
+                    max="10"
+                >
+                <button onclick="addStudent()">
+                    Add Student
+                </button>
+            </div>
+        </div>
+        <div class="load-box">
+            <button onclick="loadUsingFetch()">
+                Load using fetch()
+            </button>
+            <button onclick="loadUsingJQuery()">
+                Load using $.getJSON()
+            </button>
+        </div>
+        <div class="table-box">
+            <div class="table-heading">
+                <h2>📋 Student List</h2>
+                <span id="studentCount">
+                    Students: 0
+                </span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>CGPA</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

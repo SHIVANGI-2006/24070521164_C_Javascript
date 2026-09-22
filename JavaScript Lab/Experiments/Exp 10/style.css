@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #F7F1DF;
+    color: #36332D;
+}
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+header {
+    background: #3D3A34;
+    color: #FFF8E7;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+}
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+header p {
+    color: #E9D98A;
+}
+.add-box {
+    background: #FFFDF5;
+    padding: 25px;
+}
+.add-box h2 {
+    color: #5A4B18;
+    margin-bottom: 18px;
+}
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+input,
+select {
+    padding: 13px;
+    border: 1px solid #D8C98A;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #FFFEF9;
+    color: #36332D;
+}
+input:focus,
+select:focus {
+    border-color: #C5A52E;
+    box-shadow: 0 0 0 2px #F2E8B9;
+}
+.form button {
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #C5A52E;
+    color: #2F2C25;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.form button:hover {
+    background: #A98B1F;
+    color: white;
+}
+.load-box {
+    background: #F3E9C5;
+    padding: 18px;
+    text-align: center;
+    border-top: 1px solid #DDD09B;
+    border-bottom: 1px solid #DDD09B;
+}
+.load-box button {
+    padding: 11px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #5A554B;
+    color: #FFF9E8;
+    cursor: pointer;
+    font-weight: bold;
+}
+.load-box button:hover {
+    background: #C5A52E;
+    color: #2F2C25;
+}
+.table-box {
+    background: #FFFDF5;
+    padding: 25px;
+    border-radius: 0 0 16px 16px;
+}
+.table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.table-heading h2 {
+    color: #5A4B18;
+}
+#studentCount {
+    background: #EFE3A8;
+    color: #5A4B18;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    background: #C5A52E;
+    color: #2F2C25;
+    padding: 14px;
+    text-align: left;
+}
+td {
+    padding: 13px;
+    border-bottom: 1px solid #E5DDBE;
+}
+tr:hover {
+    background: #F8F0D2;
+}
+.delete-btn {
+    background: #6B665C;
+    color: #FFFDF5;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.delete-btn:hover {
+    background: #3D3A34;
+}
