@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MyStyle Preference Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <h1>⚙️ MyStyle</h1>
+        <p class="subtitle">Preference Manager</p>
+        <hr>
+        <h3>Choose Theme</h3>
+        <div class="themes">
+            <label>
+                <input type="radio" name="theme" value="light" checked>
+                ☀️ Light
+            </label>
+            <label>
+                <input type="radio" name="theme" value="dark">
+                🌙 Dark
+            </label>
+        </div>
+        <button id="clearBtn">
+            CLEAR PREFERENCE
+        </button>
+        <button id="localBtn">
+            SAVE USING LOCAL STORAGE
+        </button>
+        <button id="sessionBtn">
+            SAVE USING SESSION STORAGE
+        </button>
+        <p id="status">Status: No preference saved</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

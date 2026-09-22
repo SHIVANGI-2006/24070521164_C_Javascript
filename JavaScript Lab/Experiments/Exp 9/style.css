@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #E0E7FF;
+    color: #1E293B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+/* MAIN BOX */
+.box {
+    width: 380px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+/* HEADING */
+h1 {
+    margin-bottom: 5px;
+    color: #4F46E5;
+}
+.subtitle {
+    color: #64748B;
+    margin-top: 0;
+}
+hr {
+    border: none;
+    border-top: 1px solid #E2E8F0;
+    margin: 20px 0;
+}
+/* THEMES */
+.themes {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 20px 0 25px;
+}
+.themes label {
+    cursor: pointer;
+}
+/* BUTTONS */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 7px;
+    background: #4F46E5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background: #3730A3;
+}
+/* CLEAR BUTTON */
+#clearBtn {
+    background: #64748B;
+}
+#clearBtn:hover {
+    background: #475569;
+}
+/* STATUS */
+#status {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #16A34A;
+}
+/* DARK THEME */
+body.dark {
+    background: #0F172A;
+    color: white;
+}
+body.dark .box {
+    background: #1E293B;
+}
+body.dark .subtitle {
+    color: #CBD5E1;
+}
+body.dark hr {
+    border-color: #475569;
+}
+body.dark h1 {
+    color: #A78BFA;
+}
