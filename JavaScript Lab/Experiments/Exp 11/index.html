@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusSync | Smart Class Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">C</div>
+            <div>
+                <h1>CampusSync</h1>
+                <p>SMART CAMPUS DASHBOARD</p>
+            </div>
+        </div>
+        <div class="live-badge">
+            <span class="live-dot"></span> LIVE SCHEDULE
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">YOUR ACADEMIC DAY</p>
+                <h2>Class Schedule</h2>
+                <p class="muted">Stay on time. Stay organized.</p>
+            </div>
+            <div class="date-box">
+                <span id="dayLabel">TODAY</span>
+                <strong id="dateLabel">--</strong>
+            </div>
+        </section>
+
+        <section class="timer-card">
+            <div class="timer-info">
+                <span class="eyebrow" id="timerLabel">SCHEDULE STATUS</span>
+                <h2 id="currentSubject">Preparing your schedule...</h2>
+                <p id="timerDescription">Your next class will appear here.</p>
+                <div class="class-meta">
+                    <span id="facultyLabel">Faculty: --</span>
+                    <span id="roomLabel">Room: --</span>
+                </div>
+            </div>
+
+            <div class="countdown">
+                <p id="countdownLabel">TIME REMAINING</p>
+                <div id="countdown">00:00:00</div>
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+                <p id="timeRange">--:-- - --:--</p>
+            </div>
+        </section>
+
+        <section class="schedule-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Today's Classes</h2>
+                    <p class="muted">Your classes update automatically.</p>
+                </div>
+                <span class="class-count">05 CLASSES</span>
+            </div>
+
+            <div class="class-list" id="classList"></div>
+        </section>
+
+        <div class="footer-note">
+            <span class="live-dot"></span>
+            Countdown refreshes every second
+        </div>
+    </main>
+
+    <div id="notification" class="notification" role="status" aria-live="polite">
+        <div class="notification-icon">✓</div>
+        <div>
+            <strong id="notificationTitle">CampusSync</strong>
+            <p id="notificationMessage">Schedule notification</p>
+        </div>
+        <button id="closeNotification" aria-label="Close notification">×</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
