@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #F5F3FF;
+    color: #1E293B;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    width: 240px;
+    background: #111827;
+    color: white;
+    padding: 25px 18px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 45px;
+}
+.brand > span {
+    font-size: 27px;
+}
+.brand h1 {
+    font-size: 20px;
+}
+.brand small {
+    color: #A78BFA;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+.side-title {
+    color: #94A3B8;
+    font-size: 11px;
+    margin: 0 10px 15px;
+    letter-spacing: 1px;
+}
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 12px;
+    margin-bottom: 7px;
+    border-radius: 8px;
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 13px;
+}
+nav a span {
+    font-size: 11px;
+    color: #94A3B8;
+}
+nav a.active {
+    background: #7C3AED;
+    color: white;
+}
+nav a.active span {
+    color: white;
+}
+.progress-box {
+    background: #1E293B;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 35px;
+}
+.progress-box p {
+    font-size: 12px;
+    color: #CBD5E1;
+    margin-bottom: 10px;
+}
+.progress {
+    height: 6px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #A78BFA;
+    transition: 0.3s;
+}
+#progressText {
+    display: block;
+    text-align: right;
+    margin-top: 7px;
+    color: #A78BFA;
+    font-size: 13px;
+}
+.sidebar-footer {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 20px;
+    font-size: 11px;
+    color: #94A3B8;
+}
+main {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 35px 45px;
+}
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.welcome {
+    font-size: 10px;
+    color: #7C3AED;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.topbar h2 {
+    font-size: 28px;
+    margin-top: 5px;
+    color: #111827;
+}
+.portal-badge {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #16A34A;
+    font-size: 12px;
+}
+.form-section {
+    background: white;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    padding: 25px 30px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
+}
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 1px solid #E2E8F0;
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+}
+.section-icon {
+    width: 42px;
+    height: 42px;
+    background: #F3E8FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.section-heading h3 {
+    color: #111827;
+    font-size: 17px;
+}
+.section-heading p {
+    color: #64748B;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.field-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px 20px;
+}
+.field.full {
+    grid-column: 1 / -1;
+}
+.field label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: #334155;
+}
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    border: 1px solid #CBD5E1;
+    border-radius: 7px;
+    padding: 11px;
+    font-size: 13px;
+    color: #1E293B;
+    background: #FFFFFF;
+    font-family: Arial, sans-serif;
+}
+.field textarea {
+    height: 75px;
+    resize: vertical;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #7C3AED;
+    box-shadow: 0 0 0 3px #F3E8FF;
+}
+.gender-group {
+    display: flex;
+    gap: 20px;
+    height: 38px;
+    align-items: center;
+}
+.gender-group label {
+    font-weight: normal;
+    margin: 0;
+}
+.gender-group input {
+    width: auto;
+    margin-right: 5px;
+}
+.field small,
+#genderError {
+    display: block;
+    min-height: 15px;
+    margin-top: 4px;
+    font-size: 10px;
+}
+.valid {
+    border-color: #16A34A !important;
+}
+.invalid {
+    border-color: #DC2626 !important;
+}
+.submit-box {
+    background: #111827;
+    color: white;
+    border-radius: 12px;
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.submit-box strong {
+    font-size: 15px;
+}
+.submit-box p {
+    color: #94A3B8;
+    font-size: 11px;
+    margin-top: 4px;
+}
+.submit-box button {
+    border: none;
+    background: #7C3AED;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+.submit-box button:hover {
+    background: #A78BFA;
+}
+#result {
+    text-align: center;
+    font-weight: bold;
+    margin: 18px 0;
+}
