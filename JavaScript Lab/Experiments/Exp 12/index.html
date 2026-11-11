@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventora | Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="brand">eventora<span>.</span></a>
+        <a href="#events" class="nav-link">Explore Events</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">EXPERIENCES THAT CONNECT US</span>
+            <h1>Make your next<br>moment <span>count.</span></h1>
+            <p>Discover events, meet inspiring people, and reserve your seat.</p>
+            <a href="#events" class="primary-btn">Explore Events ↗</a>
+        </div>
+        <div class="hero-art">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="hero-center">
+                <span>YOUR</span>
+                <strong>NEXT<br>EVENT</strong>
+                <span>STARTS HERE</span>
+            </div>
+            <span class="spark spark-one">✳</span>
+            <span class="spark spark-two">✦</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="stats" id="stats">
+            <div class="stat">
+                <span>EVENTS</span>
+                <strong id="totalEvents">—</strong>
+            </div>
+            <div class="stat">
+                <span>TOTAL SEATS</span>
+                <strong id="totalSeats">—</strong>
+            </div>
+            <div class="stat">
+                <span>SEATS BOOKED</span>
+                <strong id="totalBooked">—</strong>
+            </div>
+            <div class="stat">
+                <span>SEATS AVAILABLE</span>
+                <strong id="totalAvailable">—</strong>
+            </div>
+        </section>
+
+        <section class="events-section" id="events">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FIND YOUR EXPERIENCE</span>
+                    <h2>Upcoming events</h2>
+                </div>
+                <p>Choose an event and save your seat.</p>
+            </div>
+
+            <div id="eventList" class="event-grid">
+                <p class="loading">Loading events...</p>
+            </div>
+        </section>
+
+        <section class="registration-section" id="register">
+            <div class="form-intro">
+                <span class="eyebrow">YOUR SPOT AWAITS</span>
+                <h2>Reserve your<br><span>seat.</span></h2>
+                <p>Fill in your details to register for your selected event.</p>
+
+                <div class="seat-reminder">
+                    <span class="seat-dot"></span>
+                    <div>
+                        <strong id="selectedEventName">Select an event</strong>
+                        <p id="selectedSeats">Choose an event above to see availability.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form id="registrationForm">
+                <div class="form-row">
+                    <div class="field">
+                        <label for="fullName">Full name</label>
+                        <input id="fullName" name="fullName" type="text" placeholder="Enter your name" required
+                            minlength="2">
+                    </div>
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field">
+                        <label for="phone">Phone number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="10-digit mobile number"
+                            pattern="[6-9][0-9]{9}" required>
+                    </div>
+                    <div class="field">
+                        <label for="eventSelect">Select event</label>
+                        <select id="eventSelect" name="eventId" required>
+                            <option value="">Choose an event</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="ticketType">Ticket type</label>
+                    <select id="ticketType" name="ticketType" required>
+                        <option value="Standard">Standard — Free</option>
+                        <option value="Student">Student — Free</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="primary-btn submit-btn">
+                    Confirm Registration ↗
+                </button>
+
+                <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="registrations-section">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">YOUR ACTIVITY</span>
+                    <h2>My registrations</h2>
+                </div>
+                <span class="saved-badge" id="registrationCount">0 saved</span>
+            </div>
+
+            <div id="registrationList" class="registration-list">
+                <p class="empty-state">Your registrations will appear here.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="brand">eventora<span>.</span></a>
+        <p>Discover. Connect. Experience.</p>
+    </footer>
+
+</body>
+
+</html>

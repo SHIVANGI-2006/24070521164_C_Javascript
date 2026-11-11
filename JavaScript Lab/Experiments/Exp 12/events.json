@@ -1,0 +1,38 @@
+[
+    {
+        "id": "EV101",
+        "title": "TechNova 2026",
+        "category": "Technology",
+        "symbol": "⌘",
+        "theme": "gold",
+        "date": "2026-11-15",
+        "time": "10:00 AM",
+        "venue": "Innovation Auditorium",
+        "description": "Explore emerging technologies, AI innovations, and the future of software.",
+        "capacity": 100
+    },
+    {
+        "id": "EV102",
+        "title": "Creative Minds Summit",
+        "category": "Creativity",
+        "symbol": "✳",
+        "theme": "purple",
+        "date": "2026-11-20",
+        "time": "11:00 AM",
+        "venue": "Seminar Hall A",
+        "description": "A gathering for designers, creators, and students who love new ideas.",
+        "capacity": 60
+    },
+    {
+        "id": "EV103",
+        "title": "Future Leaders Forum",
+        "category": "Leadership",
+        "symbol": "↗",
+        "theme": "slate",
+        "date": "2026-11-25",
+        "time": "02:00 PM",
+        "venue": "Conference Centre",
+        "description": "Build communication skills, explore leadership, and connect with professionals.",
+        "capacity": 80
+    }
+]
